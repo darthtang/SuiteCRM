@@ -297,6 +297,9 @@ class ListViewDisplay {
             'buttons' => $menuItems,
             'flat' => false,
         );
+//        echo $link ;
+//        This code below is for self under standing of how suitecrm works and var_dumping
+//        var_dump($link["buttons"]);
         return $link;
 
 }

@@ -842,10 +842,12 @@ class SugarEmailAddress extends SugarBean {
         $passedModule = $module;
         $module = $this->getCorrectedModule($module);
         $saveModule = $module;
+
         if(isset($_POST['is_converted']) && $_POST['is_converted']==true){
             $id=$_POST['return_id'];
             $module=$_POST['return_module'];
         }
+
         $prefillDataArr = array();
         if(!empty($id)) {
             $prefillDataArr = $this->getAddressesByGUID($id, $module);

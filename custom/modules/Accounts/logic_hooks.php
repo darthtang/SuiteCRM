@@ -11,11 +11,12 @@ $hook_array['after_save'] = Array();
 $hook_array['after_save'][] = Array(77, 'updateRelatedMeetingsGeocodeInfo', 'custom/modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'updateRelatedMeetingsGeocodeInfo'); 
 $hook_array['after_save'][] = Array(78, 'updateRelatedProjectGeocodeInfo', 'custom/modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'updateRelatedProjectGeocodeInfo'); 
 $hook_array['after_save'][] = Array(79, 'updateRelatedOpportunitiesGeocodeInfo', 'custom/modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'updateRelatedOpportunitiesGeocodeInfo'); 
-$hook_array['after_save'][] = Array(80, 'updateRelatedCasesGeocodeInfo', 'custom/modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'updateRelatedCasesGeocodeInfo'); 
+$hook_array['after_save'][] = Array(80, 'updateRelatedCasesGeocodeInfo', 'custom/modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'updateRelatedCasesGeocodeInfo');
+$hook_array['after_save'][] = Array(81, 'updateCalls','custom/modules/Accounts/myNewHook.php','myNewHook' ,'updateCalls');
 $hook_array['after_relationship_add'] = Array(); 
 $hook_array['after_relationship_add'][] = Array(77, 'addRelationship', 'custom/modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'addRelationship'); 
-$hook_array['after_relationship_delete'] = Array(); 
-$hook_array['after_relationship_delete'][] = Array(77, 'deleteRelationship', 'custom/modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'deleteRelationship'); 
+$hook_array['after_relationship_delete'] = Array();
+$hook_array['after_relationship_delete'][] = Array(77, 'deleteRelationship', 'custom/modules/Accounts/AccountsJjwg_MapsLogicHook.php','AccountsJjwg_MapsLogicHook', 'deleteRelationship');
 
 
 

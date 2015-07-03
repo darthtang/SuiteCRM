@@ -15,6 +15,28 @@ class AccountsJjwg_MapsLogicHook {
         }
     }
 
+    function updateCalls(&$bean,$event,$arguments){
+        //after_save
+        $jjwg_Maps = get_module_info('jjwg_Maps');
+        if ($jjwg_Maps->settings['logic_hooks_enabled']) {
+            require_once('modules/Accounts/Account.php');
+            require_once('modules/Calls/call.php');
+            $account = $this;
+                //check if there is a duplicate account when saved
+                //if there is a duplicate
+                //return
+
+                //else create a new call..call->create or something
+            $call = BeanFactory::newBean('Calls');
+                //use save in call? $call = new  $call?
+
+
+
+        }
+
+
+    }
+
     function updateRelatedProjectGeocodeInfo(&$bean, $event, $arguments) {
         // after_save
         $jjwg_Maps = get_module_info('jjwg_Maps');
@@ -93,9 +115,10 @@ class AccountsJjwg_MapsLogicHook {
     }
 
     function deleteRelationship(&$bean, $event, $arguments) {
+
         // after_relationship_delete
         $GLOBALS['log']->info(__METHOD__.' $arguments: '.print_r($arguments, true));
-        // $arguments['module'], $arguments['related_module'], $arguments['id'] and $arguments['related_id'] 
+        // $arguments['module'], $arguments['related_module'], $arguments['id'] and $arguments['related_id']
         $jjwg_Maps = get_module_info('jjwg_Maps');
         if ($jjwg_Maps->settings['logic_hooks_enabled']) {
             $focus = get_module_info($arguments['module']);

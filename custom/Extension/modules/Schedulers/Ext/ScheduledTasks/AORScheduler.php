@@ -113,12 +113,12 @@ EOF;
         $mail->Body=$html;
         $mail->prepForOutbound();
         $success = true;
-        $emails = $bean->get_email_recipients();
-        foreach($emails as $email_address) {
-            $mail->ClearAddresses();
+       // $emails = $bean->get_email_recipients();
+      //  foreach($emails as $email_address) {
+      //      $mail->ClearAddresses();
             $mail->AddAddress($email_address);
-            $success = $mail->Send() && $success;
-        }
+       //     $success = $mail->Send() && $success;
+      //  }
         $bean->last_run = $timedate->getNow()->asDb(false);
         $bean->save();
         return true;

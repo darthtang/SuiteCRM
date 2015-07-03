@@ -89,6 +89,8 @@ EOF;
         return "<a href='javascript:void(0)' id=\"targetlist_listview_". $loc ." \" onclick=\"$js\">{$app_strings['LBL_ADD_TO_PROSPECT_LIST_BUTTON_LABEL_ACCOUNTS_CONTACTS']}</a>";
     }
 
+
+
 	function process($file, $data, $htmlVar) {
 
         $this->actionsMenuExtraItems[] = $this->buildAddAccountContactsToTargetList();
